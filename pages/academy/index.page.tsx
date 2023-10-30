@@ -2,6 +2,10 @@ import React from "react";
 import * as S from "./style";
 import Title from "components/Title";
 import { academyList } from "constants/academyList";
+import dynamic from "next/dynamic";
+
+const DynamicComponent = dynamic(() => import("react-force-graph-3d"));
+
 function Academy() {
   return (
     <div>
