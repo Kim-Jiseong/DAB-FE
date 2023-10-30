@@ -3,7 +3,9 @@ import { paperList } from "constants/papers";
 import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 
-const DynamicComponent = dynamic(() => import("react-force-graph-3d"));
+const DynamicComponent = dynamic(() => import("react-force-graph-3d"), {
+  ssr: false,
+});
 
 const generateGraphData = (papers: any) => {
   const nodes = papers.map((paper: any) => ({

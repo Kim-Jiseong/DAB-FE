@@ -9,7 +9,9 @@ import { paperList } from "constants/papers";
 import { useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 
-const DynamicComponent = dynamic(() => import("react-force-graph-3d"));
+const DynamicComponent = dynamic(() => import("react-force-graph-3d"), {
+  ssr: false,
+});
 function useParentWidth() {
   const ref = useRef<any>(null); // 부모 컴포넌트의 DOM 요소를 참조하기 위한 ref
   const [width, setWidth] = useState<any>(0); // 부모 컴포넌트의 너비를 저장하는 상태
