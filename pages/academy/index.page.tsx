@@ -10,10 +10,13 @@ function Academy() {
         <S.ContentContainer>
           {academyList &&
             academyList.map((academy) => (
-              <S.AcademyContainer>
+              <S.AcademyContainer key={academy.category}>
                 <S.Title>{academy.category}</S.Title>
                 {academy.conferences.map((conf) => (
-                  <S.Content onClick={() => window.open(conf.link)}>
+                  <S.Content
+                    key={conf.name}
+                    onClick={() => window.open(conf.link)}
+                  >
                     <p>{conf.name}</p>
                     <span>{conf.link}</span>
                   </S.Content>

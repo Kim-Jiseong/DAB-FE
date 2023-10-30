@@ -11,7 +11,7 @@ function Header() {
     { src: "/graph", name: "논문 Graph" },
     { src: "/academy", name: "관련 학회" },
     { src: "/notice", name: "고려대 대학원 연구 소식" },
-    { src: "/survey", name: "설문 참여하기" },
+    { src: "/", name: "설문 참여하기" },
   ];
   return (
     <HeaderContainer>
@@ -19,7 +19,7 @@ function Header() {
       <MenuContainer>
         {menuList &&
           menuList.map((menu) => (
-            <Link href={menu.src}>
+            <Link key={menu.name} href={menu.src}>
               <Menu id={menu.src} pathname={router.pathname}>
                 {menu.name}
               </Menu>

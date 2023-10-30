@@ -13,7 +13,10 @@ function Notice() {
         <S.ContentContainer>
           {noticeList &&
             noticeList.map((notice) => (
-              <S.NoticeContainer onClick={() => window.open(notice.link)}>
+              <S.NoticeContainer
+                key={notice.link}
+                onClick={() => window.open(notice.link)}
+              >
                 {notice.title}
               </S.NoticeContainer>
             ))}

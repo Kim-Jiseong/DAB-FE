@@ -11,7 +11,7 @@ function Recommendation() {
         <S.PaperContainer>
           {paperList &&
             paperList.map((paper) => (
-              <S.ContentContainer>
+              <S.ContentContainer key={paper.title}>
                 <S.ContentTitle>{paper.title}</S.ContentTitle>
                 <S.ContentInfoWrapper>
                   <S.ContentSubTitle>논문 게재 상태</S.ContentSubTitle>
@@ -21,7 +21,7 @@ function Recommendation() {
                   <S.ContentSubTitle>키워드</S.ContentSubTitle>
                   <p>
                     {paper.keywords.map((keyword, idx) => (
-                      <span>
+                      <span key={keyword}>
                         {keyword}
                         {idx !== paper.keywords.length - 1 && ", "}
                       </span>
@@ -32,7 +32,7 @@ function Recommendation() {
                   <S.ContentSubTitle>연구분야</S.ContentSubTitle>
                   <p>
                     {paper.researchField.map((data, idx) => (
-                      <span>
+                      <span key={data}>
                         {data}
                         {idx !== paper.researchField.length - 1 && ", "}
                       </span>
