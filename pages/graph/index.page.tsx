@@ -1,6 +1,5 @@
 import Title from "components/Title";
 import { paperList } from "constants/papers";
-// import ForceGraph3D from "react-force-graph-3d";
 import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 

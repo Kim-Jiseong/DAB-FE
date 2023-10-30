@@ -6,7 +6,6 @@ import Header from "components/Header";
 import ProfileContainer from "./components/ProfileContainer";
 import SearchBar from "components/SearchBar";
 import { paperList } from "constants/papers";
-// import ForceGraph3D from "react-force-graph-3d";
 import { useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 
