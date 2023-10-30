@@ -7,9 +7,9 @@ const DynamicComponent = dynamic(() => import("react-force-graph-3d"));
 
 const generateGraphData = (papers: any) => {
   const nodes = papers.map((paper: any) => ({
-    id: paper.title, // 논문 제목을 노드의 ID로 사용합니다.
-    name: paper.title, // 논문 제목을 노드 라벨로 사용합니다.
-    url: paper.link, // 논문 링크를 노드의 URL 정보로 저장합니다.
+    id: paper.title,
+    name: paper.title,
+    url: paper.link,
   }));
 
   const links: any = [];
@@ -29,7 +29,6 @@ function Graph() {
   const [graphData, setGraphData] = useState(null);
 
   useEffect(() => {
-    // 컴포넌트가 마운트될 때 그래프 데이터를 설정합니다.
     const data = generateGraphData(paperList);
     setGraphData(data as any);
   }, []);
